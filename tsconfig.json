@@ -1,41 +1,38 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "types": [
-      "webpack-env",
-      "mocha",
-      "chai"
-    ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
-  },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+	"include": [
+		"index.ts",
+		"src/**/*.ts"
+	],
+	"compilerOptions": {
+		"strict": true,
+		"strictPropertyInitialization": false,
+		"strictNullChecks": false,
+		"sourceMap": true,
+		"declaration": true,
+		"moduleResolution": "node",
+		"module": "commonjs",
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"target": "ES2018",
+		"outDir": "./dist",
+		"incremental": false,
+		"esModuleInterop": true,
+		"lib": [
+			"es2020",
+			"dom"
+		],
+		"typeRoots": [
+			"node_modules/@types"
+		],
+		"types": [
+			"@types/mocha",
+			"@types/chai"
+		],
+		"baseUrl": "./index.ts"
+	},
+	"exclude": [
+		"node_modules",
+		"dist/*",
+		"tests/*"
+	]
 }
